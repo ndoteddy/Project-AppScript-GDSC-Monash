@@ -1,0 +1,36 @@
+{
+    "timeZone": "Asia/Singapore",
+    "dependencies": {
+      "enabledAdvancedServices": [
+        {
+          "userSymbol": "BigQuery",
+          "serviceId": "bigquery",
+          "version": "v2"
+        }
+      ],
+      "libraries": [
+        {
+          "userSymbol": "OAuth2",
+          "version": "43",
+          "libraryId": "1B7FSrk5Zi6L1rSxxTDgDEUsPzlukDsi4KGuTMorsTQHhGBzBkMun4iDF"
+        }
+      ]
+    },
+    "webapp": {
+      "executeAs": "USER_DEPLOYING",
+      "access": "MYSELF"
+    },
+    "exceptionLogging": "STACKDRIVER",
+    "oauthScopes": [
+      "https://www.googleapis.com/auth/spreadsheets.currentonly",
+      "https://www.googleapis.com/auth/script.external_request",
+      "https://www.googleapis.com/auth/cloud-platform",
+      "https://www.googleapis.com/auth/presentations",
+      "https://www.googleapis.com/auth/documents",
+      "https://www.googleapis.com/auth/calendar",
+      "https://www.googleapis.com/auth/calendar.readonly",
+      "https://www.googleapis.com/auth/script.container.ui",
+      "https://www.googleapis.com/auth/script.send_mail"
+    ],
+    "runtimeVersion": "V8"
+  }

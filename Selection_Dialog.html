@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+      function submitSelection() {
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        const selectedRows = Array.from(checkboxes).map(cb => cb.value);
+        google.script.run.addSelectedCouriersToCalendar(selectedRows);
+        google.script.host.close();
+      }
+
+      window.onload = function() {
+        document.getElementById('checkboxContainer').innerHTML = checkboxesHtml; // Render checkboxes
+      };
+    </script>
+  </head>
+  <body>
+    <h3>Select Couriers to Add to Calendar</h3>
+    <div id="checkboxContainer"></div> <!-- Placeholder for checkboxes -->
+    <button type="button" onclick="submitSelection()">Add to Calendar</button>
+  </body>
+</html>
